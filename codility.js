@@ -21,19 +21,18 @@ Start
 */
 
 
-function solution(){
-
-
-let a = [""]
-let d = new Date("")
-let accountBalance= a[0]
+function solution(a,d){
+// We need to be familiar with the account balance and card payment so as to continue with the process
+let accountBalance= a*12
 let cardPayment = 5*12
 
- for (let i =1; i < a.length;i++){
+// See if the length of the array if greater than 0
     if(a.length && d.length === 0 ){
         return 0    
  } 
-    else if( accountBalance[i] < a){
+
+// Check if the account balance is greater than  then we would dedeuct the card payment.
+    else if( accountBalance > 0 ){
         accountBalance - cardPayment
     }else{
         return "not enough funds"
@@ -41,6 +40,6 @@ let cardPayment = 5*12
  }
 
 
-
-console.log (solution)
+const total = (solution((100,100,100,-10),("2020-12-31","2020-12-03","2020-12-29")))
+console.log (total)
 
